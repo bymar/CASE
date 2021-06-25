@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>C.A.S.E Autenticator Service</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css">
+</head>
+
+<body>
+
+    <!-- START NAV -->
+    
+    <!-- END NAV -->
+    <span class="icon is-small is-right">
+        <i></i>
+    </span>
+    <div class="container">
+        <div class="columns">
+            <div class="column is-3 ">
+                <aside class="menu is-hidden-mobile">
+                    <p class="menu-label">
+                        General
+                    </p>
+                    <ul class="menu-list">
+                        <li><a>Inicio</a></li>
+                        <li><a>Farmácia Básica</a></li>
+                        <li><a>Conheça C.A.S.E.</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="column is-9">
+                <section class="hero is-info welcome is-small">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h1 class="title">
+                                Bem-vinde!
+                            </h1>
+                            <h2 class="subtitle">
+                                Faça o registro da movimentação da farmácia básica ou consulte o histórico.
+                            </h2>
+                        </div>
+                    </div>
+                </section>
+                <section class="info-tiles">
+                    <div class="tile is-ancestor has-text-centered">
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">{{ins}}</p>
+                                <p class="subtitle">Quantidade atual</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">{{usados}}</p>
+                                <p class="subtitle">Quantidade consumida</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box">
+                                <p class="title">{{outs}}</p>
+                                <p class="subtitle">Quantidade de saídas</p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <div class="columns">
+                    <div class="column is-6">
+                        <div class="card events-card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Events
+                                </p>
+                                <a href="#" class="card-header-icon" aria-label="more options">
+                  <span class="icon">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </a>
+                            </header>
+                            <div class="card-table">
+                                <div class="content">
+                                    <table class="table is-fullwidth is-striped">
+                                        <tbody>
+                                            <tr>
+                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                                <td>Medicamentos Genericos</td>
+                                                <td class="level-right"><a class="button is-small is-primary">Acessar</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                                <td>Gráficos de Flutuação</td>
+                                                <td class="level-right"><a class="button is-small is-primary">Acessar</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                                <td>Laboratorios</td>
+                                                <td class="level-right"><a class="button is-small is-primary">Acessar</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <footer class="card-footer">
+                                <a class="card-footer-item">View All</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                    <form action="/farmaciabasica" method="POST">
+                        <div class="field">
+                            <label class="label">ENTRADAS</label>
+                            <div class="control">
+                              <input class="input" type="text" placeholder="" name="entradab">
+                            </div>
+                          </div>
+                          <div class="field">
+                            <label class="label">CONSUMIDOS</label>
+                            <div class="control">
+                              <input class="input" type="text" placeholder="" name="consumob">
+                            </div>
+                          </div>
+                          <div class="field">
+                            <label class="label">SAÍDAS</label>
+                            <div class="control">
+                              <input class="input" type="text" placeholder="" name="saidab">
+                            </div>
+                          </div>
+                          <div class="field">
+                            <label class="label">MOTIVO DA SAÍDA</label>
+                            <div class="control">
+                              <input class="input" type="text" placeholder="" name="motivob">
+                            </div>
+                          </div>
+                          <div class="control">
+                            <button class="button is-link">Registrar</button>
+                          </div>
+                    </form>        
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script async type="text/javascript" src="../js/bulma.js"></script>
+</body>
+
+</html>

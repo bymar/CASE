@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>C.A.S.E Autenticator Service</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+
+<body>
+    <section class="hero is-success is-fullheight">
+        <div class="hero-body" style="background-color:whitesmoke;">
+            <div class="container has-text-centered">
+                <div class="column is-4 is-offset-4">
+                    <h3 class="title has-text-black">C.A.S.E.</h3>
+                    <p class="subtitle has-text-black">Para prosseguir, faça o login.</p>
+                    <div class="box">
+                        <figure class="avatar">
+                            <img src="images\logoCASEpequeno.png">
+                        </figure>
+                        <form action="/login" method="POST">
+                            <div class="field">
+                                <label class="label">Nome de Usuário</label>
+                                <div class="control">
+                                    <input class="input is-medium" type="text" placeholder="" autofocus="" name="login">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Senha</label>
+                                <div class="control">
+                                    <input class="input is-medium" type="password" placeholder="" name="pw">
+                                </div>
+                            </div>
+                            <button class="button is-block is-info is-medium is-fullwidth">Submit <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                        </form>
+                    </div>
+                    <p class="has-text-black">
+                        <a href="{{ url_for('erro') }}">Forgot Password</a> &nbsp;·&nbsp;
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script async type="text/javascript" src="../js/bulma.js"></script>
+</body>
+
+</html>

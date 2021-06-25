@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>C.A.S.E Autenticator Service</title>
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/bulma-divider.min.css">
+
+  <style>
+    nav.navbar {
+      height: 6rem !important;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06) !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- START NAV -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="images\logoCASE.png" >
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+  
+        <a class="navbar-item" href="https://drive.google.com/drive/u/4/folders/11h89l64kM3acrAjfdODDZ1TGNuQgEXg-">
+          Documentation
+        </a>
+      </div>
+  
+      <div class="navbar control">
+        <div class="navbar-item control">
+            <div class="control"></div>
+              <a href="{{ url_for('cadastro') }}" class="button is-link">
+                <strong>Cadastre-se</strong>
+              </a>
+              <a 
+              href="{{ url_for('login') }}" class="button is-danger">
+                <strong>Login</strong>
+              </a>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- END NAV -->
+
+  <!-- Image -->
+  <section class="hero ">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8 is-offset-2">
+              <img src="images\logoCASE.png" alt="">
+            </figure>
+          </div>
+        </div>
+
+        <section class="section">
+          <div class="columns">
+            <div class="column is-8 is-offset-2">
+              <div class="content is-medium">
+                <h2 class="subtitle is-4">Quem somos?</h2>
+                <h1 class="title">C.A.S.E.</h1>
+                <p>O C.A.S.E. é uma equipe formada por sete alunos, da instituição de ensino superior 
+                    CESAR SCHOOL, que juntaram suas diferenças e habilidades para buscar soluções 
+                    criativas e inovadoras para a Saúde.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="is-divider"></div>
+
+        <section class="section">
+          <div class="columns">
+            <div class="column is-8 is-offset-2">
+              <div class="content is-medium">
+                <h2 class="subtitle is-4">Controle e Automação na Segurança dos Estoques</h2>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- newsletter -->
+  <section class="section">
+    <div class="columns">
+      <div class="column is-10 is-offset-1">
+        <div class="container has-text-centered is-fluid">
+          <div class="hero is-light">
+            <div class="hero-body">
+              <h2 class="title is-4">Fale conosco</h2>
+                <div class="column is-6 is-offset-3">
+                    <div class="field">
+                        <label class="label">E-mail</label>
+                        <div class="control">
+                          <input class="input" type="email" placeholder="Normal">
+                        </div>
+                      </div>
+                    <div class="field">
+                        <label class="label">Mensagem</label>
+                        <div class="control">
+                          <textarea class="textarea" placeholder="Textarea"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="field is-grouped is-grouped-centered">
+                        <p class="control">
+                          <a class="button is-primary">
+                            Submit
+                          </a>
+                        </p>
+                        <p class="control">
+                          <a class="button is-danger">
+                            Cancel
+                          </a>
+                        </p>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Bulma - Blog theme</strong> by <a href="https://gonzalojs.com">Gonzalo Gutierrez</a>. Based on the <a
+          href="http://jigsaw-blog-staging.tighten.co/">jigsaw-blog</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+  </script>
+
+</body>
+
+</html>

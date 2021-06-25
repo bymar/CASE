@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>C.A.S.E Autenticator Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/register.css">
+  </head>
+
+  <body>
+    <section class="container">
+      <div class="columns is-multiline">
+        <div class="column is-8 is-offset-2 register">
+          <div class="columns">
+            <div class="column left">
+              <h1 class="title is-1">C.A.S.E.</h1>
+              <h2 class="subtitle colored is-4">Web Service</h2>
+              <p>Controle e automação na Segurança de Estocagem</p>
+            </div>
+            <div class="column right has-text-centered">
+              <h1 class="title is-4">Inicie seu cadastro</h1>
+              <form action="/cadastro" method="POST">
+                <div class="field">
+                    <label class="label">Seu nome</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="" name="nome">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="control has-icons-left has-icons-right">
+                      <input class="input" type="text" placeholder="" name="username">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-user"></i>
+                      </span>
+                      <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                      </span>
+                    </div>
+                  </div>
+                <div class="field has-addons">
+                    <p class="control">
+                      <input class="input" type="text" placeholder="" name="email">
+                    </p>
+                    <p class="control">
+                      <a class="button is-static">
+                        @ws.case
+                      </a>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control has-icons-left">
+                      <input class="input" type="password" placeholder="" name="senha">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control">
+                      <button class="button is-primary">
+                        Submit
+                      </button>
+                    </p>
+                  </div>
+                <small><em>Para uma farmácia hospitalar mais segura.</em></small>
+              </form> 
+            </div>
+          </div>
+        </div>
+        <div class="column is-8 is-offset-2">
+          <br>
+          <nav class="level">
+            <div class="level-left">
+              <div class="level-item">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span> &emsp;
+                <span class="icon">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+            </div>
+            <div class="level-right">
+              <small class="level-item" style="color: var(--textLight)">
+                &copy;   C.A.S.E. Web Service.
+                         Super Cool Website. All Rights Reserved.
+              </small>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </body>
+  <style>
+    :root {
+      --brandColor: hsl(0, 60%, 55%);
+      --background: rgb(247, 247, 247);
+      --textDark: hsla(0, 0%, 0%, 0.66);
+      --textLight: hsla(0, 0%, 0%, 0.33);
+    }
+
+    body {
+      background: var(--background);
+      height: 100vh;
+      color: var(--textDark);
+    }
+
+    .field:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    .register {
+      margin-top: 10rem;
+      background: white;
+      border-radius: 10px;
+    }
+
+    .left,
+    .right {
+      padding: 4.5rem;
+    }
+
+    .left {
+      border-right: 5px solid var(--background);
+    }
+
+    .left .title {
+      font-weight: 800;
+      letter-spacing: -2px;
+    }
+
+    .left .colored {
+      color: var(--brandColor);
+      font-weight: 500;
+      margin-top: 1rem !important;
+      letter-spacing: -1px;
+    }
+
+    .left p {
+      color: var(--textLight);
+      font-size: 1.15rem;
+    }
+
+    .right .title {
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .right .description {
+      margin-top: 1rem;
+      margin-bottom: 1rem !important;
+      color: var(--textLight);
+      font-size: 1.15rem;
+    }
+
+    .right small {
+      color: var(--textLight);
+    }
+
+    input {
+      font-size: 1rem;
+    }
+
+    input:focus {
+      border-color: var(--brandColor) !important;
+      box-shadow: 0 0 0 1px var(--brandColor) !important;
+    }
+
+    .fab,
+    .fas {
+      color: var(--textLight);
+      margin-right: 1rem;
+    }
+
+  </style>
+
+</html>
