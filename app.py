@@ -74,14 +74,14 @@ def inicio(): #ta funcionando ok
         senhacontrole = request.form['segredo']
         basicaf = request.form['basic']
 
-        with open('senhastemporatias.txt', 'r', encoding='utf-8') as controle:
+        with open('senhastemporarias.txt', 'r', encoding='utf-8') as controle:
             controle = controle.read()
 
             if senhacontrole in controle and basicaf:
                 return redirect(url_for('farmaciabasica'))
             
             else:
-                return redirect(url_for('senhaincorreta'))
+               return redirect(url_for('senhaincorreta'))
 
 
 @app.route('/farmaciabasica', methods=['GET', 'POST'])
