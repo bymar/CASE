@@ -23,7 +23,7 @@ Membros de ciências da computação da equipe:
 
 - [Mar Galdino](https://www.linkedin.com/in/mariana-galdino-059243174/)
 
-Membros de design do grupo Simplifica+ :
+Membros de design do grupo CASE:
 
 - [Mariana Santana](mailto:mfs3@cesar.school),   [Matteo Gomes](mailto:mgs3@cesar.school)
 
